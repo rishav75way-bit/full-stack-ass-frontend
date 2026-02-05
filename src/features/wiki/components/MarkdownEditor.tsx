@@ -4,7 +4,6 @@ import ReactMarkdown from 'react-markdown';
 import { Button } from '../../../app/components/Button';
 import { TextArea } from '../../../app/components/TextArea';
 import { cn } from '../../../app/utils/cn';
-import { TableOfContents } from './TableOfContents';
 
 interface MarkdownEditorProps {
   title: string;
@@ -35,7 +34,7 @@ export const MarkdownEditor = ({
 
   return (
     <div className="h-full flex flex-col bg-slate-50 overflow-hidden relative">
-      {}
+      { }
       <div className="bg-white border-b border-slate-200 px-6 py-4 flex items-center justify-between z-10 sticky top-0 shadow-sm">
         <div className="flex-1 max-w-2xl">
           <input
@@ -47,7 +46,7 @@ export const MarkdownEditor = ({
         </div>
 
         <div className="flex items-center gap-2">
-          {}
+          { }
           <div className="bg-slate-100 p-1 rounded-xl flex items-center gap-1 mr-4">
             <button
               onClick={() => setViewMode('editor')}
@@ -128,9 +127,9 @@ export const MarkdownEditor = ({
       </div>
 
       <div className="flex-1 flex overflow-hidden">
-        {}
+        { }
 
-        {}
+        { }
         {viewMode !== 'preview' && (
           <div className={cn(
             "flex-1 p-6 lg:p-10 animate-fade-in",
@@ -152,7 +151,7 @@ Try using markdown headers, lists, and code blocks."
           </div>
         )}
 
-        {}
+        { }
         {viewMode !== 'editor' && (
           <div className="flex-1 overflow-y-auto bg-slate-50/50 custom-scrollbar">
             <div className="max-w-4xl mx-auto py-12 px-8 lg:px-16">
