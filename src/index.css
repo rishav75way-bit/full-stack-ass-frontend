@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-slate-200;
+  }
+
+  body {
+    @apply bg-white text-slate-900 min-h-screen font-sans antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+}
+
+@layer components {
+
+  /* Simple Card Style */
+  .card {
+    @apply bg-white border border-slate-200 shadow-sm rounded-xl;
+  }
+
+  /* Smooth transitions */
+  .smooth-transition {
+    @apply transition-all duration-200 ease-in-out;
+  }
+}
+
+@layer utilities {
+
+  /* Custom scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-slate-50;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-slate-200 rounded-full;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-300;
+  }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  aside,
+  nav,
+  button,
+  .floating-nav,
+  #comments {
+    display: none !important;
+  }
+
+  body {
+    background-color: white !important;
+  }
+
+  .print-header {
+    margin-bottom: 2rem !important;
+  }
+
+  .card {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+
+  .prose {
+    max-width: none !important;
+  }
+}
